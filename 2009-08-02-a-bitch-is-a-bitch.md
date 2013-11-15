@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 【自醒文】今天你犯贱了吗
+title: 【自醒文】贱人就是矫情
 date: 2009-08-02 22:50
 category: 我的世界观
 excerpt:
