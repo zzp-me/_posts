@@ -2,7 +2,7 @@
 layout: article
 title: 人所不欲，勿施于人
 date: 2010-08-17 00:33
-category: 人生如戏
+category: 我的世界观
 excerpt:
   孔子曰己所不欲勿施于人，
   庄子言己所甚欲勿施于人，
