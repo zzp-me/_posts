@@ -3,7 +3,10 @@ layout: article
 title: 消灭分支语句之责任链模式
 date: 2013-01-26 22:47
 category: 设计模式
-excerpt: 
+excerpt:
+  许多代码都会滥用if else和switch语句，
+  本文介绍如何避免写大量的if else，
+  并提高代码的可维护性和灵活性。
 ---
 
 分支语句是所有编程语言的基本元素，比如Java语言中的if else和switch语句，它们提供一种能力允许程序根据一些条件动态地选择执行某些代码块。这种动态性给程序带来了很多的灵活性！
