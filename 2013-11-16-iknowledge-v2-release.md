@@ -1,6 +1,6 @@
 ---
 layout: article
-title: iKnowledge 2.0 正式发布
+title: iKnowledge 2.0 发布：把事情做对！
 date: 2013-11-16 00:21
 category: iKnowledge
 excerpt:

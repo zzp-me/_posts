@@ -1,6 +1,6 @@
 ---
 layout: article
-title: iKnowledge诞生记
+title: iKnowledge诞生记：知识vs经验
 date: 2013-03-13 21:31:46
 category: iKnowledge
 excerpt:
