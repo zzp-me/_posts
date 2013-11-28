@@ -2,7 +2,7 @@
 layout: article
 title: 一分钟安装iKnowledge
 date: 2013-11-28 21:18:23
-category: 第二版
+category: iKnowledge
 excerpt:
   下载、安装并运行iKnowledge
 ---
