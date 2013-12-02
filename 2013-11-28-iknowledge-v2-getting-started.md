@@ -13,7 +13,7 @@ excerpt:
 $ gem install jekyll
 ```
 
-因为iKnowledge基于[Jekyll](http://jekyllrb.com/)，因此这一步是必需完成的。如果上述命令在你的环境中不能成功执行，请参考[jekyll安装指南]()。
+因为iKnowledge基于[Jekyll](http://jekyllrb.com/)，因此这一步是必需完成的。如果上述命令在你的环境中不能成功执行，请参考[jekyll安装指南]({% post_url 2013-12-02-jekyll-quick-start %})。
 
 # 2. 下载iKnowledge
 
