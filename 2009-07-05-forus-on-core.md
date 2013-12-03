@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 专注核心
+title: 抓重点！
 date: 2009-07-05 23:30
 category: 我的世界观
 excerpt:
