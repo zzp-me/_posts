@@ -2,7 +2,7 @@
 layout: article
 title: 开源不应作为推荐的理由
 date: 2008-09-04 21:31
-category: 我的世界观
+category: 我是程序员
 excerpt:
   作为软件的使用者，我首先在乎的是软件是否能完成工作；
   其次是成本的问题；
