@@ -2,7 +2,7 @@
 layout: article
 title: JavaScript通过JDBC访问数据库
 date: 2012-08-22 09:20
-category: JS数据库
+category: 服务端JS
 excerpt:
   Rhino是Mozilla开发的纯Java实现的JS引擎，已经包含在Java 6里。
   通过Rhino，我们可以在JS中直接调用Java库，这里演示通过JDBC访问数据库。
