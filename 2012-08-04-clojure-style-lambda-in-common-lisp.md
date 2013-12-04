@@ -2,7 +2,7 @@
 layout: article
 title: 在Common Lisp中实现Clojure的fn
 date: 2012-08-04 19:39
-category: Y-combinator
+category: Lisp
 excerpt:
   Clojure中Lambda支持递归，所以我要在Common Lisp中也实现这样的功能！
 ---

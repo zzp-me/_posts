@@ -2,7 +2,7 @@
 layout: article
 title: Lisp中实现匿名递归函数
 date: 2011-08-05 22:22
-category: Y-combinator
+category: Lisp
 excerpt:
   主流的 Lisp 实现（Common Lisp、Guile、Emacs Lisp 等）
   中默认都没提供定义匿名的递归函数的方法。
