@@ -2,7 +2,7 @@
 layout: article
 title: awk学习笔记
 date: 2010-01-05 20:20
-category: UNIX超级工具
+category: 命令行超级工具
 excerpt:
   学完sed学awk！《倚天屠龙记》中的张无忌，他经常说“我有九阳神功护体，学什么武功都很快”；
   我们程序员也可以牛气地喊“我掌握了正则表达式，UNIX下工具上手都很快”，哈哈。

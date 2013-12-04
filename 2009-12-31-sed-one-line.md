@@ -2,7 +2,7 @@
 layout: article
 title: sed单行脚本学习笔记
 date: 2009-12-31 18:07
-category: UNIX超级工具
+category: 命令行超级工具
 excerpt:
   sed是UNIX下的流编辑器（stream editor），sed脚本通常以开始都很小，并且写和读都很简单。
   在测试脚本时，可能会发现不适用于一般规则的特殊情况。
