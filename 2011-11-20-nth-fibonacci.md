@@ -19,6 +19,8 @@ excerpt:
 
 {% img 1.png %}
 
+# Clojure版
+
 本来是想着用 Java 写一个，一想到又要定义两三个类代码会显得冗长，倒不如用 Clojure 来实现。好在 Clojure 里也没太多稀奇古怪的符号，即使你没接触过 Clojure，应该还是能看懂。
 
 ```clojure
@@ -69,4 +71,40 @@ See http://en.wikipedia.org/wiki/Fibonacci_number."
 redraiment.math.fibonacci=>(time (do (fibonacci-nth 1000000) 0))
 "Elapsed time: 4272.027189 msecs"
 0
+```
+
+# Scheme版本
+
+有网友把上面的代码翻译成Scheme，据他说代码执行效率很低。我试着在我本地用 Guile 或 Kawa 来执行他的代码，都提示 Out Of Memory。但我一直相信 Scheme 的性能会更好，因为它的解释器是 C语言实现的，Clojure 则运行在 JVM 下的。所以我就自己翻译了一下之前的代码，也是计算第1000000个斐波那契数，在我公司这台旧电脑上的执行效率远好于Clojure版：
+
+```bash
+$ time guile fib.scm
+1953282128707757731632.......42546875
+real    0m0.750s
+user    0m0.265s
+sys     0m0.124s
+```
+
+代码如下
+
+```scheme
+(define (c* a b)
+  (let ((a1 (car a))
+        (b1 (cadr a))
+        (a2 (car b))
+        (b2 (cadr b)))
+    (list (+ (* a1 a2) (* b1 b2 5))
+          (+ (* a1 b2) (* a2 b1)))))
+
+(define (c** r i c)
+  (if (zero? c)
+      r
+      (c** (if (odd? c) (c* r i) r)
+           (c* i i)
+           (quotient c 2))))
+
+(define (fib n)
+  (* 2 (cadr (c** '(1 0) '(1/2 1/2) n))))
+
+(display (fib 1000000))
 ```
