@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 如何设计一门编程语言
+title: 程序的灵活性
 date: 2009-07-25 11:51
 category: 编程语言生态
 excerpt:
