@@ -37,7 +37,7 @@ gem install jekyll
 
 {% img 1.png %}
 
-使用相同的方法，安装gcc。
+使用相同的方法，安装gcc和make。
 
 ## 3. 安装Jekyll
 
