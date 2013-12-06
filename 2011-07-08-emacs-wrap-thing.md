@@ -35,12 +35,14 @@ Possibilities include `region', `symbol', `list', `sexp', `defun', `filename',
 
 (defmacro make-wrap-for (&rest things)
   "A tool for define wrap-region, wrap-word etc."
-  (let ((exp '()))
-    (dolist (e things)
-      (push `(defun ,(intern (concat "wrap-" (symbol-name e))) ()
-               (interactive)
-               (wrap-thing (quote ,e))) exp))
-    (push 'progn exp)))
+  `(progn
+     ,@(mapcar
+        (lambda (e)
+          `(defun ,(intern (concat "wrap-" (symbol-name e))) ()
+             (interactive)
+             (wrap-thing ',e (cons (read-string "Left: ")
+                                   (read-string "Right: ")))))
+        things)))
 
 (make-wrap-for region symbol list sexp defun
                filename url email word sentence
