@@ -9,7 +9,48 @@ excerpt:
 
 几天前分享了一段 JavaScript 代码《[整数转汉语大写]({% post_url 2011-06-13-translate-digit-to-chinese.md %})》，刚刚做了一个改进，可以处理两位小数（角和分）和负数（欠款）。
 
+# 算法分析
+
+## 负数
+
+如果参数是负数，只需把前缀设成“欠”即可，同时把参数改成正数。
+
+```javascript
+var prefix = n < 0? '欠': '';
+n = Math.abs(n);
+```
+
+## 小数
+
+首先要逐个取出小数部分，例如“0.12”要分别取出1和2。
+
+```javascript
+var d = Math.floor(n * Math.pow(10, i + 1)) % 10;
+```
+
+小数部分不像整数部分需要分组，因此只需添加单位即可：
+
+```javascript
+s += digit[d] + fraction[i];
+```
+
+最后，小数部分的零不用读，例如“0.01”读成一分，而不是零角一分。因此去除所有零的部分：
+
+```javascript
+s += (digit[d] + fraction[i]).replace(/零./, '');
+```
+
+## 整数部分
+
+整数部分完全沿用之前的代码，只需去掉参数的小数部分。
+
+```javascript
+n = Math.floor(n);
+```
+
 # 代码
+
+完整代码如下：
 
 ```javascript
 var digit_uppercase = function(n) {
