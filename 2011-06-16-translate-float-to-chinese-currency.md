@@ -1,13 +1,13 @@
 ---
 layout: article
-title: 金额转中文大写
+title: 浮点数转中文金额大写
 date: 2011-06-16 12:32
 category: 中文计算器
 excerpt:
   支持负数和小数，即能处理欠款、“角”和“分”。
 ---
 
-几天前分享了一段 JavaScript 代码《[整数转汉语大写]({% post_url 2011-06-13-translate-digit-to-chinese %})》，刚刚做了一个改进，可以处理两位小数（角和分）和负数（欠款）。
+几天前分享了一段 JavaScript 代码《[整数转中文金额大写]({% post_url 2011-06-13-translate-integer-to-chinese-currency %})》，刚刚做了一个改进，可以处理两位小数（角和分）和负数（欠款）。
 
 # 算法分析
 

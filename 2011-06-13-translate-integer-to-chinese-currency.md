@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 整数转汉语大写
+title: 整数转中文金额大写
 date: 2011-06-13 22:35
 category: 中文计算器
 excerpt:
