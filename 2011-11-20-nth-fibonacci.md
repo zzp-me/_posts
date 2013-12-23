@@ -51,7 +51,7 @@ excerpt:
     x^n = x^(n/2) * x^(n/2)     ; 当n是偶数
     x^n = x^(n/2) * x^(n/2) * x ; 当n是奇数
 
-可以把效率提升到O(log<sub>2</sub><sup>n</sup>)，在《[JavaScript字符串乘法]{% post_url 2009-08-18-js-string-multiply %}》一文中也使用了类似的技巧。
+可以把效率提升到O(log<sub>2</sub><sup>n</sup>)，在《[JavaScript字符串乘法]({% post_url 2009-08-18-js-string-multiply %})》一文中也使用了类似的技巧。
 
 ## 虚数的乘法
 
