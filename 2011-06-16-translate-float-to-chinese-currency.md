@@ -86,9 +86,9 @@ var digit_uppercase = function(n) {
              .replace(/^$/, '零')
           + group[i] + s;
     }
-    return prefix +　s.replace(/(零.)*零元/, '元')
-            　　　　　.replace(/(零.)+/g, '零')
-            　　　　　.replace(/^整$/, '零元整');
+    return prefix + s.replace(/(零.)*零元/, '元')
+                     .replace(/(零.)+/g, '零')
+                     .replace(/^整$/, '零元整');
 };
 ```
 
