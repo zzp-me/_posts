@@ -103,7 +103,7 @@ s.replace(/(零.)*零元/, '元')
 
 # 代码
 
-下面是完整的代码，目前只处理正整数。
+下面是完整的代码，目前只处理正整数。处理小数部分的算法请参见《[浮点数转中文金额大写]({% post_url 2011-06-16-translate-float-to-chinese-currency %})》。
 
 ```javascript
 var digit_uppercase = function(n) {
