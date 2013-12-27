@@ -18,15 +18,15 @@ excerpt:
 #include <stdio.h>
 int main (int argc, char *argv[])
 {
-// not show/
-not show/
+// not show\
+not show\
 not show
 // not show
 /* not show */
     int is; // not show
     int/* not show */ ms; /* not show */
-    double ds; // not show/
-    not show/
+    double ds; // not show\
+    not show\
     not show
     double dm; /* ...
     not show
@@ -42,7 +42,7 @@ not show
 }
 ```
 
-其中灰色部分就是注释，经过处理后需要将它们全部移除或用替换成空字符。论坛原帖中没有处理以“/”结尾的单行注释，也没处理注释关键字出现在字符串中的情况。
+其中灰色部分就是注释，经过处理后需要将它们全部移除或用替换成空字符。论坛原帖中没有处理以“\”结尾的单行注释，也没处理注释关键字出现在字符串中的情况。
 
 # 工具的选择
 
@@ -67,41 +67,34 @@ sed 是一个流编辑器，它能对文件进行“插入”、“删除”、�
 ```awk
 # filename: strip_c_comment.awk
 # issue: awk -f scrip_c_comment.awk test.c
-BEGIN {
-  FS=""
-}
+#!/bin/awk -f
 
-!(ignore_line && $NF == "//") && !ignore_line-- {
-  ignore_line = 0;
-
-  for(i = 1; i <= NF; i++) {
-    if (ignore_block) {
-      if ($i $(i+1) == "*/") {
-        ignore_block = 0
-        i++ # remove '*'
-      }
-      continue
+BEGIN { FS="" }
+!(ignore_line && $NF == "\\") && !ignore_line-- {
+    ignore_line = 0;
+    for(i = 1; i <= NF; i++) {
+        if (ignore) {
+            if ($i $(i+1) == "*/") {
+                ignore = 0
+                i++ # remove '*'
+            }
+            continue
+        }
+        if (!instr && $i $(i+1) == "/*") {
+            ignore = 1
+            i++ # remove '/'
+            continue
+        }
+        if (!instr && $i $(i+1) == "//") {
+            ignore_line = ($NF == "\\")? 1: 0
+            break
+        }
+        if ($i == "\"") {
+            instr = 1 - instr
+        }
+        printf($i)
     }
-
-    if (!instr && $i $(i+1) == "/*") {
-      ignore_block = 1
-      i++ # remove '/'
-      continue
-    }
-
-    if (!instr && $i $(i+1) == "//") {
-      ignore_line = ($NF == "//")? 1: 0
-      break
-    }
-
-    if ($i == "/"") {
-      instr = 1 - instr
-    }
-
-    printf($i)
-  }
-
-  printf("/n")
+    printf("\n")
 }
 ```
 
@@ -109,7 +102,7 @@ BEGIN {
 
 <dl>
   <dt>ignore_line</dt>
-  <dd>如果上一行是以“/”结尾的单行注释则为“True”；</dd>
+  <dd>如果上一行是以“\”结尾的单行注释则为“True”；</dd>
   <dt>ignore_block</dt>
   <dd>如果当前字符在块注释中则为“True”；</dd>
   <dt>instr</dt>
@@ -125,11 +118,17 @@ BEGIN {
 #include <stdio.h>
 int main (int argc, char *argv[])
 {
+
+
+
     int is; 
     int ms; 
     double ds; 
     double dm; 
+
  float fs; 
+
+
     float fm;
     char cs[] = "aaa // /***/";
     char cm1[] = "hello*/";
